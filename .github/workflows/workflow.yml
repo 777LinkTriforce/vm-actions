@@ -22,7 +22,7 @@ jobs:
 
     - name: provision virtual machine in azure
       env:
-        RESOURCE_GROUP: workvm
+        RESOURCE_GROUP: Services
         RESOURCE_GROUP_REGION: centralus
         SERVER_NAME: workvm
         ADMIN_LOGIN: jpOPS
