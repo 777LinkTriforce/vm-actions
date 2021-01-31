@@ -1,4 +1,4 @@
-name: GitHub for IT Pro CI/CD Pipeline
+name: Make a thing
 
 env:
   OUTPUT_PATH: ${{ github.workspace }}
