@@ -1,4 +1,4 @@
-﻿# This IaC script provisions a VM within Azure
+# This IaC script provisions a VM within Azure
 #
 [CmdletBinding()]
 param(
@@ -29,6 +29,10 @@ param(
     [Parameter(Mandatory = $True)]  
     [string]
     $serverName,
+
+    [Parameter(Mandatory = $True)]  
+    [string]
+    $serverSize,
 
     [Parameter(Mandatory = $True)]  
     [string]
@@ -80,7 +84,8 @@ try {
     az vm create  `
         --resource-group $resourceGroupName `
         --name $serverName `
-        --image win2019datacenter `
+        --size $serverSize `
+        --image $serverImage `
         --admin-username $adminLogin `
         --admin-password $adminPassword
     }
