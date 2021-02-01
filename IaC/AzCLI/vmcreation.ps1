@@ -36,10 +36,6 @@ param(
     
     [Parameter(Mandatory = $True)]  
     [string]
-    $licenseType,
-
-    [Parameter(Mandatory = $True)]  
-    [string]
     $adminLogin,
 
     [Parameter(Mandatory = $True)]  
@@ -86,12 +82,13 @@ az group create `
 Write-Output "Creating VM..."
 try {
     az vm create  `
-        --resource-group $resourceGroupName `
         --name $serverName `
-        --size $serverSize `
-        --license-type $licenseType `
+        --resource-group $resourceGroupName `
         --admin-username $adminLogin `
-        --admin-password $adminPassword
+        --admin-password $adminPassword`
+        --size $serverSize `
+        --license-type Windows_Client
+
     }
 catch {
     Write-Output "VM already exists"
