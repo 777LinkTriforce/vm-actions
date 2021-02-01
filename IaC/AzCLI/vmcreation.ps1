@@ -36,7 +36,7 @@ param(
     
     [Parameter(Mandatory = $True)]  
     [string]
-    $serverImage,
+    $licenseType,
 
     [Parameter(Mandatory = $True)]  
     [string]
