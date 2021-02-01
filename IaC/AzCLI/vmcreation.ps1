@@ -89,7 +89,7 @@ try {
         --resource-group $resourceGroupName `
         --name $serverName `
         --size $serverSize `
-        --image $serverImage `
+        --license-type $licenseType `
         --admin-username $adminLogin `
         --admin-password $adminPassword
     }
