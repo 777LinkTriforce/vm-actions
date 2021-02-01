@@ -33,6 +33,10 @@ param(
     [Parameter(Mandatory = $True)]  
     [string]
     $serverSize,
+    
+    [Parameter(Mandatory = $True)]  
+    [string]
+    $serverImage,
 
     [Parameter(Mandatory = $True)]  
     [string]
